@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Vinyl&display=swap');
+
+body {
+  font-family: 'Bebas Neue', cursive;
+  background-color: palevioletred;
+  min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #181818;
+}
+
+#seleccionar-mascota {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo {
+  color: white;
+  font-size: 32px;
+  font-family: 'Rubik Vinyl', cursive;
+}
+
+.subtitulo {
+  color: white;
+  font-size: 20px;
+  font-family: 'Rubik Vinyl', cursive;
+}
+
+.tarjetas, .tarjetas-ataques {
+  display: flex;
+  gap: 10px;
+}
+
+.tarjeta-de-mokepon {
+  width: 270px;
+  height: 150px;
+  background: #11468F;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 16px 14px 20px #0000008c;
+}
+
+
+.tarjeta-de-mokepon::before{
+  content: "";
+  background-image: conic-gradient(
+      #ff0052 20deg,
+      transparent 120deg
+  );
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  animation: rotate 2s linear infinite;
+}
+
+
+
+
+.tarjeta-de-mokepon img {
+  width: 120px;
+  position: relative;
+  z-index: 10px;
+}
+
+
+
+
+
+#boton-mascota {
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  background:  #ff0052;
+  border: none;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  margin-top: 30px;
+  overflow: hidden;
+  box-shadow: 4px 4px 4px #11468f;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  background-color: #5D8BF4;
+}
+
+#seleccionar-ataque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.boton-de-ataque {
+  background-color: #6F1AB6;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-color: transparent;
+  width: 80px;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  box-shadow: 4px 4px 4px  #11468f;
+}
+
+#mensajes {
+  width: 280px;
+  background: #ff0052;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 4px 4px 4px  #11468f;
+}
+
+#boton-reiniciar {
+  border-color: #ff0052;
+  color: #11468F;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.ataques {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  color: white;
+}
+
+#vidas-jugador, #vidas-enemigo {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.ataques-jugador, .ataques-enemigo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ver-mapa {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#ver-mapa button {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background:  #ff0052;
+  border: none;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  margin: 10px 10px;
+  box-shadow: 4px 4px 4px  #11468f;
+}
+
+@media (max-width: 560px) {
+  .tarjetas, .tarjetas-ataques {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 300px) {
+  #ver-mapa div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
